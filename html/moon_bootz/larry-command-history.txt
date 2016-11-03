@@ -1,0 +1,164 @@
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/web_basics (feature-index)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/web_basics (master)
+$ ls
+CNN.PNG  index.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/web_basics (master)
+$ subl index.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/web_basics (master)
+$ git pull origin master
+From https://github.com/larry-cherry/phase-0-tracks
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/web_basics (master)
+$ subl index.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/web_basics (master)
+$ git pull origin master
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/larry-cherry/phase-0-tracks
+ * branch            master     -> FETCH_HEAD
+   e1fbf34..fe1a2bc  master     -> origin/master
+Updating e1fbf34..fe1a2bc
+Fast-forward
+ html/web_basics/index.html | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/web_basics (master)
+$ subl index.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/web_basics (master)
+$ ls
+CNN.PNG  index.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/web_basics (master)
+$ cd ..
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (master)
+$ ls
+forms  moon_bootz  planning  web_basics
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (master)
+$ cd moon_bootz/
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ ls
+contact.html  images  index.html  legal  product_details.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ subl index.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ git branch
+  feature-index
+* master
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ git checkout -b release0
+Switched to a new branch 'release0'
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ subl product_details.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ ls
+contact.html  images  index.html  legal  product_details.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ cd contact.html
+sh.exe": cd: contact.html: Not a directory
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ subl contact.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ subl contact.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ subl index.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ subl product_details.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ subl index.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ subl contact.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ git status
+On branch release0
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   contact.html
+        modified:   index.html
+        modified:   product_details.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ git add contact.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ git add index.html product_details.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ git status
+On branch release0
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   contact.html
+        modified:   index.html
+        modified:   product_details.html
+
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ git commit -m "Set Up Release 0 Frame Work"
+[release0 a3f37a4] Set Up Release 0 Frame Work
+ 3 files changed, 60 insertions(+), 2 deletions(-)
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ git branch
+  feature-index
+  master
+* release0
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ git push origin release0
+Username for 'https://github.com': larry-cherry
+Password for 'https://larry-cherry@github.com':
+Counting objects: 31, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 869 bytes | 0 bytes/s, done.
+Total 7 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/larry-cherry/phase-0-tracks.git
+ * [new branch]      release0 -> release0
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ git branch
+  feature-index
+  master
+* release0
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (release0)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ ls
+contact.html  images  index.html  legal  product_details.html
