@@ -2,8 +2,8 @@
 
 * `<form>` is a block level element that is used to capture information from users and process their request
 	* Example `<name="adventure" action="" method="post">`
-	* `name` at
-	* `action` atribut is where all the information is sent
+	* `name` attribute is the name of the form.
+	* `action` attribute is where all the information is sent
 	* `method` http method the browser should use to submit form data
 
 * `<fieldset>` blocklevel element that use to group form controls and labels on an organized secetion.
