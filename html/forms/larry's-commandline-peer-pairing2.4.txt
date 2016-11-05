@@ -1,0 +1,405 @@
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (commandline-history)
+$ ls
+contact.html  james_and_larry_hangouts.png  product_details.html
+images        larry-command-history.txt     release_2.md
+index.html    legal
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (commandline-history)
+$ cd ..
+                                                                                          larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (commandline-history)
+$ ls
+forms  moon_bootz  planning  web_basics
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (commandline-history)
+$ cd forms/
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (commandline-history)                                                                           $ ls
+example-form.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (commandline-history)
+$ start example-form.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (commandline-history)
+$ subl example-form.html
+                                                                                          larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (commandline-history)                                                                           $ ls
+example-form.html
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (commandline-history)
+$ touch input_elements.md
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (commandline-history)                                                                           $ subl input_elements.md
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (commandline-history)
+$ git branch                                                                              * commandline-history
+  feature-index                                                                             hangouts-picture
+  master                                                                                    release0
+  release_2
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (commandline-history)
+$ git checkout branch 2.4-pairing-release1
+error: pathspec 'branch' did not match any file(s) known to git.                          error: pathspec '2.4-pairing-release1' did not match any file(s) known to git.
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (commandline-history)                                                                           $ git checkout -b 2.4-pairing-release1
+Switched to a new branch '2.4-pairing-release1'
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1)
+$ ls
+example-form.html  input_elements.md                                                                                                                                                larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1)
+$ git status
+On branch 2.4-pairing-release1                                                            Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+                                                                                                  input_elements.md
+nothing added to commit but untracked files present (use "git add" to track)
+                                                                                          larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1)
+$ git add .                                                                                                                                                                         larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1)
+$ ls
+example-form.html  input_elements.md
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1)                                                                          $ git commit "made the input_elements.md with james on hangouts"
+error: pathspec 'made the input_elements.md with james on hangouts' did not match any file(s) known to git.
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1)                                                                          $ git commit -m "made the input_elements.md with james on hangouts"
+[2.4-pairing-release1 5e377d1] made the input_elements.md with james on hangouts
+ 1 file changed, 15 insertions(+)
+ create mode 100644 html/forms/input_elements.md                                                                                                                                    larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1)
+$ git push origin 2.4-pairing-release1
+Username for 'https://github.com': larry-cherry                                           Password for 'https://larry-cherry@github.com':
+Counting objects: 26, done.
+Delta compression using up to 4 threads.                                                  Compressing objects: 100% (5/5), done.                                                    Writing objects: 100% (5/5), 955 bytes | 0 bytes/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/larry-cherry/phase-0-tracks.git                                      * [new branch]      2.4-pairing-release1 -> 2.4-pairing-release1
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1)                                                                          $ git branch                                                                              * 2.4-pairing-release1
+  commandline-history
+  feature-index                                                                             hangouts-picture
+  master
+  release0
+  release_2
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1)
+$ git checkout master
+M       html/forms/example-form.html
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ ls
+example-form.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git pull origin master
+remote: Counting objects: 2, done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 2
+Unpacking objects: 100% (2/2), done.
+From https://github.com/larry-cherry/phase-0-tracks
+ * branch            master     -> FETCH_HEAD
+   72af267..f05762e  master     -> origin/master                                          Updating 72af267..f05762e
+Fast-forward
+ html/moon_bootz/james_and_larry_hangouts.png | Bin 0 -> 2207033 bytes
+ html/moon_bootz/larry-command-history.txt    | 164 +++++++++++++++++++++++++++
+ 2 files changed, 164 insertions(+)
+ create mode 100644 html/moon_bootz/james_and_larry_hangouts.png
+ create mode 100644 html/moon_bootz/larry-command-history.txt
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ ls
+example-form.html
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ cd ..
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (master)    $ ls
+forms  moon_bootz  planning  web_basics
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (master)
+$ cd forms
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ ls
+example-form.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git branch
+  2.4-pairing-release1
+  commandline-history
+  feature-index
+  hangouts-picture
+* master
+  release0
+  release_2
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git pull origin master
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+From https://github.com/larry-cherry/phase-0-tracks
+ * branch            master     -> FETCH_HEAD
+   f05762e..937df4a  master     -> origin/master
+Updating f05762e..937df4a
+Fast-forward                                                                               html/forms/input_elements.md | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 html/forms/input_elements.md
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ ls
+example-form.html  input_elements.md
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ subl input_elements.md
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   example-form.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git checkout -b 2.4-pairing-release1.2
+M       html/forms/example-form.html                                                      Switched to a new branch '2.4-pairing-release1.2'
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git status
+On branch 2.4-pairing-release1.2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   example-form.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git status
+On branch 2.4-pairing-release1.2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   example-form.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        modified-example-form.PNG
+
+no changes added to commit (use "git add" and/or "git commit -a")
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git git add .
+git: 'git' is not a git command. See 'git --help'.
+
+Did you mean this?
+        init
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git add .
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git status
+On branch 2.4-pairing-release1.2
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   example-form.html
+        new file:   modified-example-form.PNG
+
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git status
+On branch 2.4-pairing-release1.2
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   example-form.html
+        new file:   modified-example-form.PNG
+
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git add .
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git commit -m "Modified example html form and took a screenshot of the results"
+[2.4-pairing-release1.2 9c9cb37] Modified example html form and took a screenshot of the results
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+ create mode 100644 html/forms/modified-example-form.PNG
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git push origin 2.4-pairing-release1.2
+Username for 'https://github.com': larry-cherry
+Password for 'https://larry-cherry@github.com':
+Counting objects: 25, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 38.95 KiB | 0 bytes/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/larry-cherry/phase-0-tracks.git                                      * [new branch]      2.4-pairing-release1.2 -> 2.4-pairing-release1.2
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (2.4-pairing-release1.2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git pull origin master
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.                                                      From https://github.com/larry-cherry/phase-0-tracks
+ * branch            master     -> FETCH_HEAD
+   937df4a..266071d  master     -> origin/master
+Updating 937df4a..266071d
+Fast-forward                                                                               html/forms/example-form.html         |   6 +++---
+ html/forms/modified-example-form.PNG | Bin 0 -> 43677 bytes
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+ create mode 100644 html/forms/modified-example-form.PNG
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ ls
+example-form.html  input_elements.md  modified-example-form.PNG
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)                                                                                        $ git pull origin master
+remote: Counting objects: 9, done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 9 (delta 2), reused 1 (delta 1), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From https://github.com/larry-cherry/phase-0-tracks
+ * branch            master     -> FETCH_HEAD
+   266071d..3832219  master     -> origin/master                                          Updating 266071d..3832219
+Fast-forward
+ html/forms/example-form.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+                                                                                          larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ ls
+example-form.html  input_elements.md  modified-example-form.PNG
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ subl example-form.html
+                                                                                          larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git status
+On branch master                                                                          Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+                                                                                          larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git branch
+  2.4-pairing-release1
+  2.4-pairing-release1.2                                                                    commandline-history
+  feature-index
+  hangouts-picture
+* master                                                                                    release0
+  release_2
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)                                                                                        $ ls
+example-form.html  input_elements.md  modified-example-form.PNG
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git pull origin master
+remote: Counting objects: 8, done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 8 (delta 1), reused 0 (delta 0), pack-reused 1
+Unpacking objects: 100% (8/8), done.
+From https://github.com/larry-cherry/phase-0-tracks
+ * branch            master     -> FETCH_HEAD
+   3832219..da544f6  master     -> origin/master                                          Updating 3832219..da544f6
+Fast-forward
+ html/forms/practice-form.html | 0
+ html/forms/success.html       | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 html/forms/practice-form.html
+ create mode 100644 html/forms/success.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ ls
+example-form.html  modified-example-form.PNG  success.html
+input_elements.md  practice-form.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ subl practice-form.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)                                                                                        $ subl success.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)                                                                                        $ cd ..
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (master)
+$ ls
+forms  moon_bootz  planning  web_basics
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (master)
+$ cd moon_bootz/
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ ls
+contact.html  james_and_larry_hangouts.png  product_details.html
+images        larry-command-history.txt     release_2.md                                  index.html    legal
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ subl i
+images/     index.html
+                                                                                          larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ git branch
+  2.4-pairing-release1
+  2.4-pairing-release1.2
+  commandline-history
+  feature-index
+  hangouts-picture                                                                        * master
+  release0
+  release_2
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ git pull origin master
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (10/10), done.                                                    From https://github.com/larry-cherry/phase-0-tracks
+ * branch            master     -> FETCH_HEAD
+   da544f6..f3b15d5  master     -> origin/master
+Updating da544f6..f3b15d5                                                                 Fast-forward
+ html/forms/practice_form.html | 65 +++++++++++++++++++++++++++++++++++++++++++
+ html/forms/success.html       |  9 ++++++
+ 2 files changed, 74 insertions(+)
+ create mode 100644 html/forms/practice_form.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ ls
+contact.html  james_and_larry_hangouts.png  product_details.html
+images        larry-command-history.txt     release_2.md
+index.html    legal
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/moon_bootz (master)
+$ cd ..
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (master)
+$ ls
+forms  moon_bootz  planning  web_basics
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html (master)
+$ cd forms/
+                                                                                          larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ ls
+example-form.html  modified-example-form.PNG  practice_form.html
+input_elements.md  practice-form.html         success.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)                                                                                        $ subl practice
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ subl practice_form.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ git pull origin master
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From https://github.com/larry-cherry/phase-0-tracks
+ * branch            master     -> FETCH_HEAD
+   f3b15d5..04d3b8a  master     -> origin/master
+Updating f3b15d5..04d3b8a
+Fast-forward
+ html/forms/practice-form.html | 65 +++++++++++++++++++++++++++++++++++++++++++
+ html/forms/practice_form.html | 65 -------------------------------------------
+ 2 files changed, 65 insertions(+), 65 deletions(-)
+ delete mode 100644 html/forms/practice_form.html
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$ ls
+example-form.html  modified-example-form.PNG  success.html                                input_elements.md  practice-form.html
+
+larry@DESKTOP-UH0E5HM ~/Documents/practice/phase-0-tracks/phase-0-tracks/html/forms (master)
+$
