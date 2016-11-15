@@ -1,0 +1,9 @@
+-Enter elavator and stand by until elevator door closes
+-Ask user what floor they would like
+	-if request matches a given floor proceed to next step, if not then inform the user the floor requested is not valid and to try again.
+		-locate elvator button and imput selection.
+		-Wait till requested floor is reached.
+		-Wait till elevator doors open.
+		-allow user to exit first
+		-exit elvator
+-stop stop
