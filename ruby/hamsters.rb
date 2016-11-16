@@ -27,3 +27,20 @@ age = gets.chomp
 	else
 		age.to_f
 	end
+
+puts "Your hampster's name is #{name}?"
+puts "Your hampster is squeak volume is #{squeaky}."
+puts "You hampster's fur is #{fur}."
+	if adoption
+		puts "Your hampster is a good canidate for adoption."
+	else
+		puts "Your hampster is not a good canidate for adoption."
+	end
+
+	if age == nil
+		puts "You never gave a proper age for your hampster"
+	else
+		puts "Your hampster is #{age} years old."
+	end
+
+puts "Thank you for your information."
