@@ -79,7 +79,9 @@ until number_of_hires == 0
 
 	number_of_hires = number_of_hires-1
 end
-puts "Processing complete thank you for using the program"
+puts "Processing complete thank you for using the program."
+puts ''
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
 #Release 2: Detection Logic: This section is for my notes. Which is why its commented out. 
 
