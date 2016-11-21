@@ -1,4 +1,6 @@
 
+# This program is designed to run various test on numerous variables to determin if the new hire is a vampire
+# Number of hires determines the number of times the loop circles
 puts "Welcome to the Werewolf Resources Department. This program will screen potentail hires and inform you how likely a hire is a vampire."
 puts "Please tell us first home many potentail hires are applying?"
 number_of_hires = gets.chomp.to_i
@@ -6,7 +8,7 @@ puts "Lets begin..."
 
 result = "Result inconclusive"
 
-until number_of_hires == 0
+until number_of_hires <= 0
 	puts "---"
 	# Gets User name
 	puts "What is your name?"
@@ -29,7 +31,7 @@ until number_of_hires == 0
 		age_warning = false
 	end
 
-	# Asks if you wants garlic bread
+	# Asks if the new hire wants garlic bread and turns the dislike_garlic into a boolean for use later in the program 
 	puts "Our company cafeteria serves garlic bread. Should we order some for you? (Y/N)"
 	dislike_garlic = gets.chomp.upcase
 	if dislike_garlic == "N"
@@ -38,7 +40,7 @@ until number_of_hires == 0
 		dislike_garlic = false
 	end
 
-	# Ask if the user want to enroll in the company's health insurance
+	# Ask if the user wants to enroll in the company's health insurance. This is turned into a boolean as well.
 	puts "Would you like to enroll in the company's health insurance? (Y/N)"
 	waives_insurance = gets.chomp.upcase
 	if waives_insurance == "N"
@@ -46,13 +48,22 @@ until number_of_hires == 0
 	else
 		waives_insurance = false
 	end
-	
-	puts "Please list any allergies you may have. Type done when finished."
-	allergies = gets.chomp
 
-	until allergies == "sunshine" || "done"
-			puts "Please enter next allergy"
-			allergies = gets.chomp
+	# Designed this to fix an issue where my original loop would automatically close out after any response. Checks for a ture false statement before exit loop
+	allergy_loop = false
+	puts "Please list any allergies you may have? Type done when finished"
+
+	allergies = gets.chomp.to_s
+	until allergy_loop == true
+		if allergies == "sunshine"
+			allergy_loop = true
+		elsif allergies == "done"
+			allergy_loop = true
+		else 
+			allergy_loop == false
+			puts "Please enter next allergy. Type done when finished."
+			allergies = gets.chomp.to_s
+		end
 	end
 
 	# Program runs test using booleans to detect if the applicant is a vampire
