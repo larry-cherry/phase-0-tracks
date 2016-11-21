@@ -47,6 +47,14 @@ until number_of_hires == 0
 		waives_insurance = false
 	end
 	
+	puts "Please list any allergies you may have. Type done when finished."
+	allergies = gets.chomp
+
+	until allergies == "sunshine" || "done"
+			puts "Please enter next allergy"
+			allergies = gets.chomp
+	end
+
 	# Program runs test using booleans to detect if the applicant is a vampire
 	if !(age_warning && dislike_garlic)
 		result = "probably not a vampire"
@@ -63,7 +71,10 @@ until number_of_hires == 0
 	if name == ("Drake Cula" || "Tu Fang")
 		result = "Definitely a vampire"
 	end
-	puts "---"
+	if allergies == "sunshine"
+		result = "Probably a vampire"
+	end
+	puts ' '
 	p result
 
 	number_of_hires = number_of_hires-1
