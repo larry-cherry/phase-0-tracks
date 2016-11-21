@@ -1,5 +1,5 @@
 
-# This program is designed to run various test on numerous variables to determin if the new hire is a vampire
+# This program is designed to run various test on numerous variables to determine if the new hire is a vampire
 # Number of hires determines the number of times the loop circles
 puts "Welcome to the Werewolf Resources Department. This program will screen potentail hires and inform you how likely a hire is a vampire."
 puts "Please tell us first home many potentail hires are applying?"
