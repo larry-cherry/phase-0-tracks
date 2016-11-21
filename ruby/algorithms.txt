@@ -7,3 +7,18 @@
 		-allow user to exit first
 		-exit elvator
 -stop stop
+
+Common Task: Starting the Washing Machinne.
+- locate dirty cloths basket. 
+- pick up dirty clothes basket.
+- locate washing machine
+- empty dirty clothes basket into washing machine
+- Find detergent
+- Pickup detergent
+- pour detergent into washing machcine
+- put up detergent
+- select washing machine load size
+- select washing machine water temperature
+- Start washing machine.
+
+-stop stop
