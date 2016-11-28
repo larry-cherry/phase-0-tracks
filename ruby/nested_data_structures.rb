@@ -1,10 +1,8 @@
-=begin
-	Design a program that uses a mixure of hashes and array data types
-	# Build out your duplex with all the rooms
-	#Create a key for furniture and a  key for appliances
-	#Setup an array in the furitur and appliance keys listing items
-	#print the result
-=end
+#broke down my hash into rooms.
+#Each room is represented by a key.
+#Each key can contain a simple string or an array of multiple strings.
+#Finally I did a standard print out of the data followed by cleaning up the print out by printing each room
+
 my_duplex = {
 	bedroom1: {
 		pretty_name: 'Bed Room 1',
@@ -37,3 +35,12 @@ my_duplex = {
 	}
 }
 p my_duplex
+p ''
+
+puts "My Duplex"
+p my_duplex[:bedroom1]
+p my_duplex[:bedroom2]
+p my_duplex[:bathroom1]
+p my_duplex[:bathroom2]
+p my_duplex[:kitchen]
+p my_duplex[:livingroom]
