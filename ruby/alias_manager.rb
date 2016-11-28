@@ -18,7 +18,8 @@ loop do
 	name_array << {name: real_name}
 	spyname = spy_alias(real_name)
 	name_array << [Spy_Name: spyname]
-	puts "Enter next spy name"
+	puts "You will from now on be known as #{spyname}"
+	puts "Enter next spy name or type 'exit' when finished"
 end
 	
 	p name_array
