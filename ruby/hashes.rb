@@ -14,6 +14,10 @@ Be sure to pseudocode, and leave your pseudocode in as comments.
 Name, Age, number of children,  decor theme
 =end
 
+#initialized the user_info hash with no data
+#add user key information as I built out the hash
+#I used the oppurtunity to ask the user for info to build the key and input data at the same time.
+
 puts "Welcome to my program"
 puts "We will need some information to get started" 
 
@@ -31,6 +35,7 @@ user_info[:children] = gets.chomp.to_i
 puts "What is your decor theme"
 user_info[:decor_theme] = gets.chomp
 
+#Prints out user data and ask for it to be verified. 
 p user_info
 
 puts "Please review the information listed above"
@@ -39,6 +44,8 @@ puts "If you need to change any of the information type the key press enter and 
 
 form_change = gets.chomp
 
+#Used a simple if statement to check what data needed to be modified if any.
+#Did this so that a loop would not be required. 
 if form_change == "name"
 	puts "enter new value"
 	user_info[:name] = gets.chomp
@@ -59,8 +66,11 @@ else form_change == "none"
 	puts "No change required"
 
 end
-
+#Restates the info again and closes out the program. 
 p ''
 p user_info	
+p ''
+
+puts "Thank you for your input."
 
  	 
