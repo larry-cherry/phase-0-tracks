@@ -62,4 +62,4 @@ puts "z".ord
 # "How many times does the letter 'a' appear in this string?".<count("a")>
 # => 4
 puts "How many times does the letter 'a' appear in this string?"
-"How many times does the letter 'a' appear in this string?".count("a")
+puts "How many times does the letter 'a' appear in this string?".count("a")
