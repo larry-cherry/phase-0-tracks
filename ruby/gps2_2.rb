@@ -90,4 +90,23 @@ loop do
 end
 
 p current_list
+
+
+Release 4: Reflect
+
+What did you learn about pseudocode from working on this challenge?
+It is easy to skip ahead and dive straight into coding. It takes disclipine and patience to pseudocode especailly when you may know how to code what you want
+
+What are the tradeoffs of using arrays and hashes for this challenge?
+Arrays are great for list but do not give alot of depth. Hashes provide much more depth and control thanks to their keys but are not always suited for simple long list
+
+What does a method return?
+It returns the evaluated result of the last line
+
+What kind of things can you pass into methods as arguments?
+You can pass all kinds of things. You can pass methods into methods, arrays, hashes, integers, and strings. To be honest I do no know what you can not pass through them yet.
+
+How can you pass information between methods?
+By passing the results from a method into the new method.
+What concepts were solidified in this challenge, and what concepts are still confusing?
 =end
