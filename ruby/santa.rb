@@ -22,7 +22,23 @@ class Santa
 
 end
 
+=begin
+#Driver Code
 santa = Santa.new("Male", "White")
 
 santa.speak(2)
 santa.eat_milk_and_cookies("Snickerdoodle")
+p ''
+
+santa = []
+santa << Santa.new("agender", "black")
+santa << Santa.new("female", "Latino")
+santa << Santa.new("bigender", "white")
+santa << Santa.new("Male", "Japanese")
+santa << Santa.new("female", "prefer not to say")
+santa << Santa.new("gender fluid", "Mystical Creature (unicorn)")
+santa << Santa.new("N/A", "N/A")
+
+p santa
+=end
+
