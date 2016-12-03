@@ -1,15 +1,16 @@
 
 class Santa
 
-	def initialize(gender, ethnicity)
+	def initialize(gender, ethnicity, height, body_type)
 		#puts "Initializing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity
-		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@reindeer_ranking = reindeer_ranking
-		age = 0
-		@age = age
-		puts "#{gender}, #{ethnicity}, #{age}, #{reindeer_ranking}"
+		@age = 0
+		@height = height
+		@body_type = body_type
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		
+		#puts "#{@gender}, #{@ethnicity}, #{@age}, #{height}, #{body_type}, #{@reindeer_ranking}"
 	end
 
 	def speak(times)
@@ -41,4 +42,18 @@ santa << Santa.new("N/A", "N/A")
 
 p santa
 =end
+
+santa_array = []
+genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+height = ["6 ft", "5 ft", "5 ft 11 inches ", "Not Sure", "Mysterious", "7 ft", "11 ft" ]
+body_type = ["slim", "big boned", "stocky", "confused", "Not Telling", "flexible", "Hard to say" ]
+genders.length.times do |i|
+  santa_array << Santa.new(genders[i], ethnicities[i], height[i], body_type[i])
+ p ''
+ p santa_array[i]
+end
+
+
+
 
