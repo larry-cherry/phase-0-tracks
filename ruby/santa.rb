@@ -1,5 +1,8 @@
 
 class Santa
+	attr_reader :age, :ethnicity, :height, :body_type 	
+	attr_accessor :gender
+
 
 	def initialize(gender, ethnicity, height, body_type)
 		#puts "Initializing Santa instance..."
@@ -22,25 +25,16 @@ class Santa
 		end
 	end
 
+	def change_age(age)
+	age = "Age #{age}"
+	@age = age
+	end
+
 	def get_mad_at(reindeer_name)
 		p @reindeer_ranking
 		@reindeer_ranking.delete("#{reindeer_name}")
 		@reindeer_ranking.push("#{reindeer_name}")
 		p @reindeer_ranking
-	end
-
-	def gender=(new_gender)
-		#p @gender
-		@gender = new_gender
-		p @gender
-	end
-
-	def age
-		@age
-	end
-
-	def ethnicity
-		@ethnicity
 	end
 
 	def speak(times)
@@ -52,6 +46,11 @@ class Santa
 	end
 
 end
+
+def shuffle(array)
+	array = array.shuffle(random: Random.new)
+end
+
 
 =begin
 #Driver Code
@@ -99,8 +98,40 @@ santa.get_mad_at("Dasher")
 #santa = Santa.new("Ditto", "Pink", " 12 inches", "slimy blob")
 #santa.gender = "Does it Have One"
 #santa.gender = "Not Sure Now"
-=end
-#Testing Getter Method for @age and @ethnicity
+
+#Testing refratored Getter Method for @age and @ethnicity
 santa = Santa.new("Male", "orange", "5ft", "Stocky with Green hair")
 p santa.age
 p santa.ethnicity
+#Now testing my code with addr_accessor for @gender
+p santa.gender
+santa.gender = "Now its different"
+p santa.gender
+#works great
+
+=end
+#driver code for random age generator
+#santa = Santa.new("Ditto", "Pink", " 12 inches", "slimy blob")
+#santa.change_age(Random.rand(0...140))
+#p santa.age
+
+santa_array = []
+genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+genders = shuffle(genders)
+#p genders
+ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+ethnicities = shuffle(ethnicities)
+#p ethnicities
+height = ["6 ft", "5 ft", "5 ft 11 inches ", "Not Sure", "Mysterious", "7 ft", "11 ft" ]
+height = shuffle(height)
+#p height
+body_type = ["slim", "big boned", "stocky", "confused", "Not Telling", "flexible", "Hard to say" ]
+body_type = shuffle(body_type)
+#p body_type
+genders.length.times do |i|
+santa = Santa.new(genders[i], ethnicities[i], height[i], body_type[i])
+#Used a random number generator for age
+santa.change_age(Random.rand(0...140))
+p "Gender: #{santa.gender}, Ethnicity: #{santa.ethnicity}, Height: #{santa.height}, Body Type: #{santa.body_type}, #{santa.age}"
+p ''
+end
