@@ -13,6 +13,36 @@ class Santa
 		#puts "#{@gender}, #{@ethnicity}, #{@age}, #{height}, #{body_type}, #{@reindeer_ranking}"
 	end
 
+	def celebrate_birthday(age)
+		@age = age
+		if @age == 1
+			puts "Happy Birthday!!"
+		else
+			puts "Maybe next year"
+		end
+	end
+
+	def get_mad_at(reindeer_name)
+		p @reindeer_ranking
+		@reindeer_ranking.delete("#{reindeer_name}")
+		@reindeer_ranking.push("#{reindeer_name}")
+		p @reindeer_ranking
+	end
+
+	def gender=(new_gender)
+		#p @gender
+		@gender = new_gender
+		p @gender
+	end
+
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
+
 	def speak(times)
 		puts "Ho, ho, ho! Happy holidays!" * times
 	end
@@ -41,7 +71,7 @@ santa << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 santa << Santa.new("N/A", "N/A")
 
 p santa
-=end
+
 
 santa_array = []
 genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -54,6 +84,23 @@ genders.length.times do |i|
  p santa_array[i]
 end
 
+#Deiver code for testing the get_mad_at method
+santa = Santa.new("Male", "White", "5ft 8 inches", "Chubby")
+santa.get_mad_at("Rudolph")
+santa.get_mad_at("Dasher")
+#delets the name from the array and then pushes it back into the array. 
 
+#Wrote some driver code to test out a method for changing age.
+#santa = Santa.new("Male", "Blue", " 24 inches", "Cute")
+#santa.celebrate_birthday(1)
+#santa.celebrate_birthday(2)
 
-
+#Driver code for @gender setter method
+#santa = Santa.new("Ditto", "Pink", " 12 inches", "slimy blob")
+#santa.gender = "Does it Have One"
+#santa.gender = "Not Sure Now"
+=end
+#Testing Getter Method for @age and @ethnicity
+santa = Santa.new("Male", "orange", "5ft", "Stocky with Green hair")
+p santa.age
+p santa.ethnicity
