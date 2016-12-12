@@ -13,17 +13,7 @@
 //newString = newString.split(",");
 //console.log(newString);
 
-//function Reverse(word) {
-	
-	//console.log("Your current word is", word);
-	
-	//this.make = make;
-	//this.model = model;
-	//this.year = year;
-	//this.color = color;
-	
-	//this.honk = function() { console.log("Honk Honk"); };
-//}
+
 //created a function that turns a string into an array, reverses the array, and then turns it back into a string
 
 
