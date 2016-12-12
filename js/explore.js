@@ -26,21 +26,7 @@
 //}
 //created a function that turns a string into an array, reverses the array, and then turns it back into a string
 
-function Reverse(word) {
 
-	this.word = word;
-	//console.log(word) 
-	word = word.split("");
-	//console.log(word);
-	word = word.reverse();
-	//console.log(word);
-	word = word.join('');
-	//console.log(word);
-	this.nword = word
-
-
-
-}
 var word = "hello";
 var newword1 = new Reverse(word);
 console.log(newword1.nword)
