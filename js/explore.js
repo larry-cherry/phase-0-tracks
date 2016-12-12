@@ -13,6 +13,7 @@
 //newString = newString.split(",");
 //console.log(newString);
 
+//created a function that turns a string into an array, reverses the array, and then turns it back into a string
 
 function Reverse(word) {
 
