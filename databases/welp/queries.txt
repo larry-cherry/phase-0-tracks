@@ -1,0 +1,15 @@
+ SELECT * FROM users, businesses, review WHERE review.business_id = businesses.id AND review.user_id = users.id;
+
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel|1|5|Awesome Venue|1|1
+4|Steven|Wonder|2|Amir's Towing|2|0|Stole my car|2|4
+2|Mandy|Kailing|3|The Beagle Nightclub|3|3|Okay beer|3|2
+3|Angela|Jolie|4|Lotus Yoga|4|4|Incredible poses|4|3
+
+sqlite> SELECT users.First_Name, users.Last_Name, businesses.name, review.Stars, review.Comment FROM users, businesses, review WHERE review.business_id = businesses.id AND review.user_id = users.id;
+Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Awesome Venue
+Steven|Wonder|Amir's Towing|0|Stole my car
+Mandy|Kailing|The Beagle Nightclub|3|Okay beer
+Angela|Jolie|Lotus Yoga|4|Incredible poses
+
+sqlite> SELECT users.First_Name, users.Last_Name, businesses.name, review.Stars, review.Comment FROM users, businesses, review WHERE review.business_id = businesses.id AND review.user_id = users.id AND businesses.name = "Amir's Towing";
+Steven|Wonder|Amir's Towing|0|Stole my car
