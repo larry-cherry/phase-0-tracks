@@ -1,0 +1,91 @@
+
+sqlite> select * from celebrities;
+1|Bradley|Cooper|41|1
+2|Bill|Clinton|70|2
+3|Anne|Hathaway|34|2
+4|Ryan|Reynolds|40|6
+5|Emma|Stone|28|6
+6|Andrew|Garfield|33|6
+7|Dwayne|Johnson|44|3
+8|Hilary|Duff|29|4
+9|Shay|Mitchell|29|5
+
+sqlite> update celebrities set First_Name="Dwayn The Rock" where id=7;
+sqlite> .tables
+celebrities  dogs
+sqlite> select * from celebrities;
+1|Bradley|Cooper|41|1
+2|Bill|Clinton|70|2
+3|Anne|Hathaway|34|2
+4|Ryan|Reynolds|40|6
+5|Emma|Stone|28|6
+6|Andrew|Garfield|33|6
+7|Dwayn The Rock|Johnson|44|3
+8|Hilary|Duff|29|4
+9|Shay|Mitchell|29|5
+
+sqlite> select * from celebrities, dogs where pet_id = dogs.id;
+1|Bradley|Cooper|41|1|1|German Shorthaired Pointer|true
+2|Bill|Clinton|70|2|2|Labrador Retriever|true
+3|Anne|Hathaway|34|2|2|Labrador Retriever|true
+4|Ryan|Reynolds|40|6|6|Golden Retriever|true
+5|Emma|Stone|28|6|6|Golden Retriever|true
+6|Andrew|Garfield|33|6|6|Golden Retriever|true
+7|Dwayn The Rock|Johnson|44|3|3|French Bulldog|false
+8|Hilary|Duff|29|4|4|Jack Russel Terrier|true
+9|Shay|Mitchell|29|5|5|Pomeranian|flase
+
+sqlite> select celebrities.First_Name, celebrities.Last_Name, dogs.Breed_Name FROM celebrities JOIN dogs on pet_id = dogs.id;
+Bradley|Cooper|German Shorthaired Pointer
+Bill|Clinton|Labrador Retriever
+Anne|Hathaway|Labrador Retriever
+Ryan|Reynolds|Golden Retriever
+Emma|Stone|Golden Retriever
+Andrew|Garfield|Golden Retriever
+Dwayn The Rock|Johnson|French Bulldog
+Hilary|Duff|Jack Russel Terrier
+Shay|Mitchell|Pomeranian
+
+sqlite> delete from celebrities where First_name="Bill";
+sqlite> select * From celebrities;
+1|Bradley|Cooper|41|1
+3|Anne|Hathaway|34|2
+4|Ryan|Reynolds|40|6
+5|Emma|Stone|28|6
+6|Andrew|Garfield|33|6
+7|Dwayn The Rock|Johnson|44|3
+8|Hilary|Duff|29|4
+9|Shay|Mitchell|29|5
+sqlite>
+
+select celebrities.First_Name, celebrities.Age, dogs.Breed_Name FROM celebrities JOIN dogs on pet_id = dogs.id;
+Bradley|41|German Shorthaired Pointer
+Anne|34|Labrador Retriever
+Ryan|40|Golden Retriever
+Emma|28|Golden Retriever
+Andrew|33|Golden Retriever
+Dwayn The Rock|44|French Bulldog
+Hilary|29|Jack Russel Terrier
+Shay|29|Pomeranian
+
+select Last_Name, First_Name, Breed_Name from celebrities inner join dogs on celebrities.pet_id = dogs.id;
+Cooper|Bradley|German Shorthaired Pointer
+Hathaway|Anne|Labrador Retriever
+Reynolds|Ryan|Golden Retriever
+Stone|Emma|Golden Retriever
+Garfield|Andrew|Golden Retriever
+Johnson|Dwayn The Rock|French Bulldog
+Duff|Hilary|Jack Russel Terrier
+Mitchell|Shay|Pomeranian
+sqlite>
+
+select First_Name, Age, Breed_Name from celebrities left outer join dogs on celebrities.pet_id = dogs.id;
+Bradley|41|German Shorthaired Pointer
+Anne|34|Labrador Retriever
+Ryan|40|Golden Retriever
+Emma|28|Golden Retriever
+Andrew|33|Golden Retriever
+Dwayn The Rock|44|French Bulldog
+Hilary|29|Jack Russel Terrier
+Shay|29|Pomeranian
+sqlite>
