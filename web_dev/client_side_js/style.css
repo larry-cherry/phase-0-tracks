@@ -1,0 +1,73 @@
+body {
+  max-width: 960px;
+}
+
+starblockquote {
+  border-left: 5px solid blue;
+  padding: 15px;
+  margin-left: 0px;
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+}
+#external-links {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+#external-links ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+main {
+  width: 78%;
+  float: right;
+  vertical-align: top;
+}
+}
+
+/* you're welcome to edit the
+image, figure, and figcaption CSS if you'd like, 
+but it's optional! */
+img {
+  width: 100%;
+}
+
+figure {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: right;
+}
+@media screen and (min-width: 500px) {
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+  main {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 16px;
+  }
+  a {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  img {
+    width: 90%;
+  }
+}
