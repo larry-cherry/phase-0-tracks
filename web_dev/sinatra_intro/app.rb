@@ -1,5 +1,6 @@
 # require gems
 require 'sinatra'
+require "sinatra/reloader"
 require 'sqlite3'
 
 db = SQLite3::Database.new("students.db")
@@ -43,4 +44,33 @@ end
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
+end
+
+get '/contact' do
+  "1705 Guadalupe St, Austin, TX 78701"
+end
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Great Job #{name}!"
+  else
+    "Great Job!"
+  end
+end
+
+get '/add' do
+  num1 = params[:num1]
+  num2 = params[:num2]
+  if num1 && num2
+    total = num1.to_i + num2.to_i
+    "#{num1} + #{num2} = #{total}"
+  else
+    "Please enter two valid numbers"
+  end
+end
+
+get '/search_database' do
+search = db.execute("SELECT * FROM students WHERE name=?", [params[:name]])
+  search.to_s
 end
