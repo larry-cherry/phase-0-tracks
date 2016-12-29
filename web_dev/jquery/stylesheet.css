@@ -1,0 +1,30 @@
+nav li{
+border-radius: 5px;
+background-color: grey;
+padding: 2px;
+margin: 2px;
+text-decoration: none;
+width: 65px;
+}
+
+a:link {
+	text-decoration: none;
+}
+div {
+    height:150px;
+    width:150px;
+    display: inline-block;
+}
+
+#Maroon {
+	background-color: #500000;
+}
+#Orange {
+	background-color: #CF5300;
+}
+#Red {
+	background-color: #AF002A;
+}
+#Purple {
+	background-color: #461D7C;
+}
