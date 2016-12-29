@@ -44,3 +44,5 @@
        $(this).toggle(1000);
    }); 
 })`
+
+Things I have noticed with JQuery is how easy it is to get stuck when writing code. JQuery troubleshooting can be a little difficult at times and JQuery is more syntax sensitive than Ruby. I found the easiest way to troubleshoot is to use the console to my advantage so I can see where an issue may be occuring. Lastly I found out that you need to import the JQuery library into your file directory and link it to your html file so you can use it. 
