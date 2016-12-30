@@ -1,5 +1,6 @@
 # require gems
 require 'sinatra'
+require 'sinatra/reloader'
 require 'sqlite3'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
@@ -16,6 +17,13 @@ end
 get '/students/new' do
   erb :new_student
 end
+
+get '/campuses' do
+	@campuses = db.execute("SELECT campus, COUNT(id) FROM students GROUP by campus")
+	#p @campuses
+	erb :campuses
+end
+	
 
 # create new students via
 # a form
