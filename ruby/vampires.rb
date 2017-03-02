@@ -10,14 +10,15 @@ result = "Result inconclusive"
 
 until number_of_hires <= 0
 	puts "---"
-	# Gets User name
+	# Gets hire's name
 	puts "What is your name?"
 	name = gets.chomp
 
-	# Gets user age
+	# Gets hire's age
 	puts "How old are you?"
 	age = gets.chomp.to_i
 
+	#Gets hire's date of birth
 	puts "What year were you born?"
 	birthyear = gets.chomp.to_i
 	realage = 2016 - birthyear
@@ -52,7 +53,7 @@ until number_of_hires <= 0
 	# Designed this to fix an issue where my original loop would automatically close out after any response. Checks for a ture false statement before exit loop
 	allergy_loop = false
 	puts "Please list any allergies you may have? Type done when finished"
-
+	# Used if statements to assign the proper true or false value to allergy loop.
 	allergies = gets.chomp.to_s
 	until allergy_loop == true
 		if allergies == "sunshine"
@@ -82,6 +83,7 @@ until number_of_hires <= 0
 	if name == ("Drake Cula" || "Tu Fang")
 		result = "Definitely a vampire"
 	end
+	# Even though the program runs through the if statements above, it is overided when the allergies variable is == to sunshine.
 	if allergies == "sunshine"
 		result = "Probably a vampire"
 	end
